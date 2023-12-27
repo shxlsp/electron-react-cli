@@ -1,6 +1,6 @@
 {
   "name": "electron-react-cli-sh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react简易脚手架",
   "main": "./bin/index.js",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "plop": "node ./bin/index.js"
+    "plop": "node ./bin/index.js",
+    "publish": "npm publish --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
