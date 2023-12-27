@@ -1,0 +1,28 @@
+console.log('主进程开始工作');
+import { app, ipcMain, BrowserWindow } from 'electron';
+import { join } from 'path';
+
+const init = () => {
+  const win = new BrowserWindow({
+    frame: false, // 创建无边框
+    center: true,
+    show: true,
+    transparent: false, // 透明窗口
+    hasShadow: true, // 是否需要阴影
+    enableLargerThanScreen: true,
+    width: 500,
+    height: 500,
+    webPreferences: {
+      preload: join(__dirname, './preloads/mainPreload.js'),
+    },
+  });
+  win.loadFile('./{{projName}}.html');
+  ipcMain.on('MAIN_SHOW_TOP', () => {
+    console.log('主窗口展示');
+    win.show();
+  });
+};
+
+app.whenReady().then(() => {
+  init();
+});

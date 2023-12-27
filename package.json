@@ -1,0 +1,27 @@
+{
+  "name": "electron-react-cli-sh",
+  "version": "1.0.0",
+  "description": "react简易脚手架",
+  "main": "./bin/index.js",
+  "bin": {
+    "electron-react-cli-sh": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "plop": "node ./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shxlsp/electron-react-cli.git"
+  },
+  "author": "shx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shxlsp/electron-react-cli/issues"
+  },
+  "homepage": "https://github.com/shxlsp/electron-react-cli#readme",
+  "dependencies": {
+    "minimist": "^1.2.6",
+    "plop": "^3.1.1"
+  }
+}

@@ -1,0 +1,8 @@
+dist/
+postcss.config.js
+jest.config.js
+tsup.config.js
+node_modules/
+*.js
+src/declarations.d.ts
+*.test.*
